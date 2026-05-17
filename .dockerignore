@@ -1,0 +1,9 @@
+.git
+.gitignore
+.dockerignore
+.env
+docker/db_data/
+docker-compose.override.yml
+README.md
+LICENSE
+license.md

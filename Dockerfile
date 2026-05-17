@@ -10,7 +10,10 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory
 WORKDIR /var/www/html
 
-# Set permissions
+# Copy the codebase and set permissions (for production/build mode)
+COPY --chown=www-data:www-data . /var/www/html
+
+# Set permissions recursively
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 9000
